@@ -8,6 +8,8 @@ I built and compared multiple regression models to estimate insurance charges. T
 
 ## Dataset
 
+The dataset includes demographic and health-related information such as age, sex, BMI, number of children, and smoking status.
+
 Features used:
 - Age  
 - Sex  
@@ -34,15 +36,29 @@ Target:
 
 Used GridSearchCV with cross-validation to find the best parameters for each model.
 
+## Understanding GridSearchCV
+
+Initially, hyperparameter tuning was done manually by trying different parameter combinations, which was time-consuming and less efficient.
+
+GridSearchCV automates this process by testing multiple parameter combinations using cross-validation and selecting the best one based on model performance.
+
+This makes the tuning process faster, more structured, and more reliable.
+
 ## Results
 
-Random Forest performed better compared to the other models and gave more consistent predictions.
+Model performance based on R² score:
+
+- SVR: 0.85989  
+- Random Forest: 0.85166  
+- Decision Tree: 0.69556  
+
+SVR achieved the highest R² score, while Random Forest also performed well and provided stable predictions.
 
 ## Key Observations
 
 - Smoking status has a strong impact on insurance charges  
 - BMI and age also influence the cost  
-- Ensemble models like Random Forest perform better than single models  
+- Ensemble models like Random Forest provide consistent performance  
 
 ## Tools Used
 
